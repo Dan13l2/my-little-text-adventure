@@ -1,9 +1,19 @@
-import java.awt.EventQueue;
+package MLTA;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.Random;
 import java.awt.event.ActionEvent;
 
@@ -18,6 +28,7 @@ public class MLTAMain3 {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+	
 				try {
 					MLTAMain3 window = new MLTAMain3();
 					window.frame.setVisible(true);
@@ -27,6 +38,7 @@ public class MLTAMain3 {
 			}
 		});
 	}
+		
 
 	/**
 	 * Create the application.
@@ -34,12 +46,13 @@ public class MLTAMain3 {
 	public MLTAMain3() {
 		initialize();
 	}
-
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.black );
 		frame.setBounds(100, 100, 756, 798);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -60,122 +73,149 @@ public class MLTAMain3 {
 		int PlayerMoneyUpChance = 40;
 		int fleeDamageChance = 50;
 		
-		
-		
-		
+	
 		JLabel Commands = new JLabel("*");
+		Commands.setForeground(Color.white);
 		Commands.setBounds(10, 11, 720, 14);
 		frame.getContentPane().add(Commands);
 		
 		JLabel label = new JLabel("*");
+		label.setForeground(Color.white);
 		label.setBounds(10, 36, 720, 14);
 		frame.getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("*");
+		label_1.setForeground(Color.white);
 		label_1.setBounds(10, 61, 720, 14);
 		frame.getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("*");
+		label_2.setForeground(Color.white);
 		label_2.setBounds(10, 86, 720, 14);
 		frame.getContentPane().add(label_2);
 		
 		JLabel label_3 = new JLabel("*");
+		label_3.setForeground(Color.white);
 		label_3.setBounds(10, 111, 720, 14);
 		frame.getContentPane().add(label_3);
 		
 		JLabel label_4 = new JLabel("*");
+		label_4.setForeground(Color.white);
 		label_4.setBounds(10, 136, 720, 14);
 		frame.getContentPane().add(label_4);
 		
 		JLabel label_5 = new JLabel("*");
+		label_5.setForeground(Color.white);
 		label_5.setBounds(10, 161, 720, 14);
 		frame.getContentPane().add(label_5);
 		
 		JLabel label_6 = new JLabel("*");
+		label_6.setForeground(Color.white);
 		label_6.setBounds(10, 186, 720, 14);
 		frame.getContentPane().add(label_6);
 		
 		JLabel label_7 = new JLabel("*");
+		label_7.setForeground(Color.white);
 		label_7.setBounds(10, 211, 720, 14);
 		frame.getContentPane().add(label_7);
 		
 		JLabel label_8 = new JLabel("*");
+		label_8.setForeground(Color.white);
 		label_8.setBounds(10, 236, 720, 14);
 		frame.getContentPane().add(label_8);
 		
 		JLabel label_9 = new JLabel("*");
+		label_9.setForeground(Color.white);
 		label_9.setBounds(10, 261, 720, 14);
 		frame.getContentPane().add(label_9);
 		
 		JLabel label_10 = new JLabel("*");
+		label_10.setForeground(Color.white);
 		label_10.setBounds(10, 286, 720, 14);
 		frame.getContentPane().add(label_10);
 		
 		JLabel label_11 = new JLabel("*");
+		label_11.setForeground(Color.white);
 		label_11.setBounds(10, 311, 720, 14);
 		frame.getContentPane().add(label_11);
 		
 		JLabel label_12 = new JLabel("*");
+		label_12.setForeground(Color.white);
 		label_12.setBounds(10, 336, 720, 14);
 		frame.getContentPane().add(label_12);
 		
 		JLabel label_13 = new JLabel("*");
+		label_13.setForeground(Color.white);
 		label_13.setBounds(10, 361, 720, 14);
 		frame.getContentPane().add(label_13);
 		
 		JLabel label_14 = new JLabel("*");
+		label_14.setForeground(Color.white);
 		label_14.setBounds(10, 386, 720, 14);
 		frame.getContentPane().add(label_14);
 		
 		JLabel label_15 = new JLabel("*");
+		label_15.setForeground(Color.white);
 		label_15.setBounds(10, 411, 720, 14);
 		frame.getContentPane().add(label_15);
 		
 		JLabel label_16 = new JLabel("*");
+		label_16.setForeground(Color.white);
 		label_16.setBounds(10, 436, 720, 14);
 		frame.getContentPane().add(label_16);
 		
 		JLabel label_17 = new JLabel("*");
+		label_17.setForeground(Color.white);
 		label_17.setBounds(10, 461, 720, 14);
 		frame.getContentPane().add(label_17);
 		
 		JLabel label_18 = new JLabel("*");
+		label_18.setForeground(Color.white);
 		label_18.setBounds(10, 486, 720, 14);
 		frame.getContentPane().add(label_18);
 		
 		JLabel label_19 = new JLabel("*");
+		label_19.setForeground(Color.white);
 		label_19.setBounds(10, 511, 720, 14);
 		frame.getContentPane().add(label_19);
 		
 		JLabel label_20 = new JLabel("*");
+		label_20.setForeground(Color.white);
 		label_20.setBounds(10, 536, 720, 14);
 		frame.getContentPane().add(label_20);
 		
 		JLabel label_21 = new JLabel("*");
+		label_21.setForeground(Color.white);
 		label_21.setBounds(10, 561, 720, 14);
 		frame.getContentPane().add(label_21);
 		
 		JLabel label_22 = new JLabel("*");
+		label_22.setForeground(Color.white);
 		label_22.setBounds(10, 586, 720, 14);
 		frame.getContentPane().add(label_22);
 		
 		JLabel label_23 = new JLabel("*");
+		label_23.setForeground(Color.white);
 		label_23.setBounds(10, 611, 720, 14);
 		frame.getContentPane().add(label_23);
 		
 		JLabel label_24 = new JLabel("*");
+		label_24.setForeground(Color.white);
 		label_24.setBounds(10, 636, 720, 14);
 		frame.getContentPane().add(label_24);
 		
 		JLabel label_25 = new JLabel("*");
+		label_25.setForeground(Color.white);
 		label_25.setBounds(10, 661, 720, 14);
 		frame.getContentPane().add(label_25);
 		
 		JLabel label_26 = new JLabel("*");
+		label_26.setForeground(Color.white);
 		label_26.setBounds(10, 686, 720, 14);
 		frame.getContentPane().add(label_26);
 		
 		JLabel lblPleaseEnter = new JLabel("please enter :");
+		lblPleaseEnter.setForeground(Color.white);
 		lblPleaseEnter.setBounds(10, 711, 720, 14);
 		frame.getContentPane().add(lblPleaseEnter);
 		
@@ -579,3 +619,4 @@ public class MLTAMain3 {
 	}
 
 }
+
